@@ -20,6 +20,6 @@ env/
 # Others that are typically not needed in version control
 *.log
 *.bak
-
+.pypirc
 dist
 
