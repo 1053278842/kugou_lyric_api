@@ -13,7 +13,7 @@ class KugouApi:
         :return: 未找到返回None.找到返回解析后的LRC文本
         """
         keyword = self.title + "+" + self.artist
-        url = f'http://krcs.kugou.com/search?ver=1&man=yes&client=mobi&keyword=${keyword}&duration=&hash=&album_audio_id='
+        url = f'http://krcs.kugou.com/search?ver=1&man=yes&client=mobi&keyword={keyword}&duration=&hash=&album_audio_id='
         res = requests.get(url)
         if res.status_code == 200:
             json_data = res.json()
