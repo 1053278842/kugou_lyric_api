@@ -1,6 +1,6 @@
 [project]
 name = "ll_kugou_lyric_api"
-version = "0.1.2"
+version = "0.1.3"
 description = "A simple Kugou lyrics fetcher"
 readme = "README.md"
 requires-python = ">=3.7"
