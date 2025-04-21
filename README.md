@@ -1,7 +1,7 @@
 # Kugou Lyrics API
 
 这是一个用于获取酷狗音乐歌词的 Python API 包。
-只需要获得歌曲名称以及作者，就可以得到对应的LRC格式歌词数据。
+只需要你拥有歌曲名称、作者（最好还能有歌曲长度），就可以得到对应的LRC格式歌词数据。
 
 ## 本地安装
 
@@ -36,17 +36,18 @@
     ```
     
 2. 在 Python 环境中使用本项目，以下是如何导入和使用该包的示例：
-
+    ps:KugouApi第三个参数是可选参数--歌曲长度(精确到ms).使用可以有效提升准确度
     ```python
     from ll_kugou_lyric_api.core import KugouApi
 
     if __name__ == "__main__":
-        # api =  KugouApi("朵","赵雷")
-        # api =  KugouApi("Kids","Two Door Cinema Club")
-        # api =  KugouApi("Пятница (星期五)","Дела Поважнее")
-        # api =  KugouApi("You Make My Dreams (Come True)","Daryl Hall & John Oates")
-        api =  KugouApi("Пятница (星期五)","Дела Поважнее")
+    # api =  KugouApi("朵","赵雷")
+    # api =  KugouApi("Kids","Two Door Cinema Club")
+    # api =  KugouApi("Пятница (星期五)","Дела Поважнее")
+    # api =  KugouApi("You Make My Dreams (Come True)","Daryl Hall & John Oates")
 
-        lyrics = kugou_api.get_kugou_lrc()
-        print(lyrics)  # 打印歌词
+    api =  KugouApi("背影","赵雷",352000)
+    # api =  KugouApi("十万嬉皮","万能青年旅店",285000)
+    # api =  KugouApi("the prom","GLAIVE",131000)
+    print(api.get_kugou_lrc()) 
     ```
