@@ -22,4 +22,5 @@ env/
 *.bak
 .pypirc
 dist
+*.json
 
