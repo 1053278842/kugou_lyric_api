@@ -36,7 +36,9 @@
     ```
     
 2. 在 Python 环境中使用本项目，以下是如何导入和使用该包的示例：
-    ps:KugouApi第三个参数是可选参数--歌曲长度(精确到ms).使用可以有效提升准确度
+
+    ps:KugouApi()第三个参数是可选参数--歌曲长度(精确到ms).使用将有效提升准确度
+
     ```python
     from ll_kugou_lyric_api.core import KugouApi
 

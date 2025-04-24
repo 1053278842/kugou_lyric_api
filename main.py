@@ -8,7 +8,11 @@ if __name__ == "__main__":
 
    # api =  KugouApi("背影","赵雷",352000)
    # api =  KugouApi("十万嬉皮","万能青年旅店",285000)
-   api =  KugouApi("the prom","GLAIVE",131000)
+   # api =  KugouApi("the prom","GLAIVE",131000)
+   # api =  KugouApi("結城アイラ","Violet Snow")
+   # api =  KugouApi("Violet Snow","結城アイラ")
+   
+   api =  KugouApi("Дasdadела Поважнее","Пятница (星asdad期五)")
    print(api.get_kugou_lrc()) 
    
    

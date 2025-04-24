@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='ll_kugou_lyric_api',              # 包名
-    version='0.1.3',
+    version='0.1.4',
     packages=find_packages(),       # 自动找到子包
     install_requires=[],            # 如果有依赖包，写这里
     author='刘龙',

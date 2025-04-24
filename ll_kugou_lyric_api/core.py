@@ -15,7 +15,7 @@ class KugouApi:
         """
         获取酷狗歌词，如果未命中尝试去除括号后重试。
         """
-        for attempt in range(2):
+        for attempt in range(3):
             keyword = self._build_keyword()
             duration = self.duration
             res = self._search_lrc(keyword,duration)
@@ -30,8 +30,13 @@ class KugouApi:
                     return self._download_best_lrc(id,accesskey)
             
             if attempt == 0:
-                print("未命中歌词，尝试清理括号内容后重试...")
+                print("未命中歌词，尝试清理括号内容...")
                 self._clean_metadata()
+            elif attempt == 1:
+                print("去除括弧后依旧未命中,尝试互换key...")
+                temp = self.artist 
+                self.artist = self.title
+                self.title= temp
             else:
                 print(f'接口{self.SEARCH_URL}返回未找到candidates[]错误!入参:{keyword},{duration}')
 
