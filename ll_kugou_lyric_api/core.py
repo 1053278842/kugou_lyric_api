@@ -38,7 +38,7 @@ class KugouApi:
                 self.artist = self.title
                 self.title= temp
             else:
-                print(f'接口{self.SEARCH_URL}返回未找到candidates[]错误!入参:{keyword},{duration}')
+                print(f'最终未命中歌词!入参:{keyword},{duration}')
 
         return None
 
